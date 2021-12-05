@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Form for CK</title>
+
+<script>
+function respayed() {
+	let x = document.forms[0].name.value;
+	let y = document.forms[0].respec.value;
+	let z = document.forms[0].homie.value;
+	var node = document.getElementById("list");
+	if (y == 'f') {
+		node.innerHTML += "<li>" + x + " has payed respects to " + z + "</li>";
+	}
+	else {
+		alert("Respects Not Paid. Please Enter 'f'");
+	}
+	return false;
+}
+</script>
+</head>
+
+<body>
+<form id="respects" onsubmit="return respayed()">
+<label for="name">Your name:</label><br>
+<input type="text" id="name" name="name"><br><br>
+
+<label for="respec">Pay your respects here: </label><br>
+<input type="text" id="respec" name="respec"><br><br>
+
+<label for="homie">Which homie are you paying respects to?:</label><br>
+<select id="homie" name="homie">
+	<option label="Choose a homie"></option>
+	<option>Gleesh: Nov 22, 2021</option>
+	<option>Bill Clinton: Nov 29, 2021</option>
+</select><br><br>
+
+<input type="submit" value="Respect">
+</form>
+
+<ul id="list">
+ <li>RESPECTS:</li>
+</ul>
+
+</body>
+</html>
